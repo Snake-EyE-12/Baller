@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class CardEffectController
+public class CardEffectController_I
 {
-    private ModelController modelController;
-    public CardEffectController(ModelController model)
+    private ModelController_I modelController;
+    public CardEffectController_I(ModelController_I model)
     {
         modelController = model;
     }

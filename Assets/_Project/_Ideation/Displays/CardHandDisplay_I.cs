@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardHandDisplay : MonoBehaviour
+public class CardHandDisplay_I : MonoBehaviour
 {
     [SerializeField] private RectTransform cardParentContainer;
-    private List<CardDisplay> cardDisplays = new();
-    public void Display(Deck deck, CardDisplay cardPrefab)
+    private List<CardDisplay_I> cardDisplays = new();
+    public void Display(Deck_I deck, CardDisplay_I cardPrefab)
     {
         DestroyCurrent();
         foreach (var card in deck.Hand)
         {
-            CardDisplay newCard = Instantiate(cardPrefab, cardParentContainer);
+            CardDisplay_I newCard = Instantiate(cardPrefab, cardParentContainer);
             newCard.Display(card);
             cardDisplays.Add(newCard);
         }

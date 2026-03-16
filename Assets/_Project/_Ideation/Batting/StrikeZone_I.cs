@@ -1,24 +1,24 @@
 using UnityEngine;
 
-public class StrikeZone
+public class StrikeZone_I
 {
-    public StrikeZone(Vector2 size)
+    public StrikeZone_I(Vector2 size)
     {
         this.size = size;
     }
-    private Crosshair activeCrosshair;
-    private PitchedBall activePitch;
+    private Crosshair_I activeCrosshair;
+    private PitchedBall_I activePitch;
     private Vector2 size;
     private float movementScaleMultiplier = 0.1f;
-    public Crosshair Crosshair => activeCrosshair;
-    public PitchedBall Pitch => activePitch;
+    public Crosshair_I Crosshair => activeCrosshair;
+    public PitchedBall_I Pitch => activePitch;
 
-    public void SetCrosshair(Crosshair crosshair)
+    public void SetCrosshair(Crosshair_I crosshair)
     {
         activeCrosshair = crosshair;
     }
 
-    public void SetPitch(PitchedBall pitch)
+    public void SetPitch(PitchedBall_I pitch)
     {
         activePitch = pitch;
     }
@@ -35,13 +35,13 @@ public class StrikeZone
 
     public float DetermineHitStrength()
     {
-        
+        return 0.0f;
     }
 }
 
-public struct Crosshair
+public struct Crosshair_I
 {
-    public Crosshair(Vector2 pos, int baseSize)
+    public Crosshair_I(Vector2 pos, int baseSize)
     {
         Position = pos;
         BaseSize = baseSize;
@@ -50,17 +50,17 @@ public struct Crosshair
     public int BaseSize { get; private set; }
 }
 
-public class PitchedBall
+public class PitchedBall_I
 {
-    public PitchedBall(Vector2 pos)
+    public PitchedBall_I(Vector2 pos)
     {
         Position = pos;
     }
     public Vector2 Position { get; set; }
-    private BallMovement movement;
+    private BallMovement_I movement;
 }
 
-public abstract class BallMovement
+public abstract class BallMovement_I
 {
     
 }

@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class StrikeZoneDisplay : MonoBehaviour
+public class StrikeZoneDisplay_I : MonoBehaviour
 {
-    [SerializeField] private PitchDisplay pitchDisplay;
-    [SerializeField] private CrosshairDisplay crosshairDisplay;
+    [SerializeField] private PitchDisplay_I pitchDisplay;
+    [SerializeField] private CrosshairDisplay_I crosshairDisplay;
     [SerializeField] private RectTransform parentRect;
 
-    public void Display(StrikeZone zone)
+    public void Display(StrikeZone_I zone)
     {
         pitchDisplay.Display(zone.Pitch);
         crosshairDisplay.Display(zone.Crosshair);

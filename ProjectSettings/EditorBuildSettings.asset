@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Menu/MainMenu.unity
+    path: Assets/_Project/_Ideation/Menu/MainMenu.unity
     guid: 730f32dcd6795c44eb767ad14abdda2f
   - enabled: 1
-    path: Assets/_Project/Menu/Creation.unity
+    path: Assets/_Project/_Ideation/Menu/Creation.unity
     guid: 955ad84f00724604bb54589eb5eceb5f
   - enabled: 1
-    path: Assets/_Project/Menu/BallGame.unity
+    path: Assets/_Project/_Ideation/Menu/BallGame.unity
     guid: aee09a10d99f00e4abf2b6418fc58e0e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

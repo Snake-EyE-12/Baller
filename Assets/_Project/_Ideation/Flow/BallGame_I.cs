@@ -1,18 +1,18 @@
-public class BallGame
+public class BallGame_I
 {
-    public BallGame()
+    public BallGame_I()
     {
         currentInning = 0;
         outs = 0;
         SetHomeOrAway(true);
     }
 
-    public BallGame(BallGameDefinition def) : this() {} // when the game changes init
+    public BallGame_I(BallGameDefinition_I def) : this() {} // when the game changes init
 
     private void SetHomeOrAway(bool wantsHome)
     {
-        battingTeam = new PlayerBallerTeam();
-        pitchingTeam = new BotBallerTeam();
+        battingTeam = new PlayerBallerTeam_I();
+        pitchingTeam = new BotBallerTeam_I();
         if (wantsHome) swapTeams();
     }
     
@@ -29,8 +29,8 @@ public class BallGame
         (battingTeam, pitchingTeam) = (pitchingTeam, battingTeam);
     }
 
-    private BallerTeam battingTeam;
-    private BallerTeam pitchingTeam;
+    private BallerTeam_I battingTeam;
+    private BallerTeam_I pitchingTeam;
 
     public void crossHome()
     {
@@ -47,12 +47,12 @@ public class BallGame
     }
 }
 
-public class BallGameDefinition
+public class BallGameDefinition_I
 {
     
 }
 
-public abstract class BallerTeam
+public abstract class BallerTeam_I
 {
     public void score()
     {
@@ -60,12 +60,12 @@ public abstract class BallerTeam
     }
 }
 
-public class PlayerBallerTeam : BallerTeam
+public class PlayerBallerTeam_I : BallerTeam_I
 {
     
 }
 
-public class BotBallerTeam : BallerTeam
+public class BotBallerTeam_I : BallerTeam_I
 {
     
 }

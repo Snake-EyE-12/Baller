@@ -1,11 +1,11 @@
 using TMPro;
 using UnityEngine;
 
-public class CardDisplay : MonoBehaviour
+public class CardDisplay_I : MonoBehaviour
 {
     [SerializeField] private TMP_Text textbox;
-    private Card displayedCard;
-    public void Display(Card card)
+    private Card_I displayedCard;
+    public void Display(Card_I card)
     {
         displayedCard = card;
         textbox.text = card.Tribe.ToString();
@@ -13,6 +13,6 @@ public class CardDisplay : MonoBehaviour
 
     public void Use()
     {
-        Controller.instance.PlayCard(displayedCard);
+        Controller_I.instance.PlayCard(displayedCard);
     }
 }
